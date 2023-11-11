@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Google Sheets</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header text-center">
+              <h4>Form Google Sheets | Lanzz Store</h4>
+            </div>
+            <div class="card-body">
+              <form name="submit-to-google-sheet">
+                <div class="form-group">
+                  <label for="PEMBELI">Pembeli :</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="PEMBELI"
+                    name="PEMBELI"
+                    placeholder="Nama Pembeli"
+                    required
+                  />
+                  <label for="JENIS AKUN" class="mt-2">Jenis Akun :</label>
+                  <select
+                    class="form-control"
+                    id="JENIS AKUN"
+                    name="JENIS AKUN"
+                    required
+                  >
+                    <option value="" disabled selected>Pilih jenis akun</option>
+                    <option value="SPOTIFY">SPOTIFY</option>
+                    <option value="YOUTUBE PREMIUM">YOUTUBE PREMIUM</option>
+                    <option value="CANVA PRO">CANVA PRO</option>
+                    <option value="VIDIO PREMIER PLATINUM">
+                      VIDIO PREMIER PLATINUM
+                    </option>
+                    <option value="ZOOM PRO">ZOOM PRO</option>
+                    <option value="APPLE MUSIC">APPLE MUSIC</option>
+                  </select>
+                  <label for="PLAN" class="mt-2">Plan :</label>
+                  <select class="form-control" id="PLAN" name="PLAN" required>
+                    <option value="" disabled selected>Pilih PLAN</option>
+                    <option data-type="SPOTIFY" value="1 BULAN">1 BULAN</option>
+                    <option data-type="SPOTIFY" value="2 BULAN">2 BULAN</option>
+                    <option data-type="SPOTIFY" value="3 BULAN">3 BULAN</option>
+                    <option data-type="YOUTUBE PREMIUM" value="1 BULAN INDPLAN">
+                      1 BULAN INDPLAN
+                    </option>
+                    <option data-type="YOUTUBE PREMIUM" value="4 BULAN INDPLAN">
+                      4 BULAN INDPLAN
+                    </option>
+                    <option data-type="YOUTUBE PREMIUM" value="1 BULAN FAMHEAD">
+                      1 BULAN FAMHEAD
+                    </option>
+                    <option data-type="CANVA PRO" value="TEAM 1 BULAN">
+                      TEAM 1 BULAN
+                    </option>
+                    <option data-type="CANVA PRO" value="ADMIN 1 BULAN">
+                      ADMIN 1 BULAN
+                    </option>
+                    <option
+                      data-type="VIDIO PREMIER PLATINUM"
+                      value="1 TAHUN NOGAR"
+                    >
+                      1 TAHUN NOGAR
+                    </option>
+                    <option data-type="ZOOM PRO" value="14 DAY">14 DAY</option>
+                    <option data-type="ZOOM PRO" value=" 30 DAY">30 DAY</option>
+                    <option data-type="APPLE MUSIC" value="1 BULAN INDPLAN">
+                      1 BULAN INDPLAN
+                    </option>
+                    <option data-type="APPLE MUSIC" value="1 BULAN FAMHEAD">
+                      1 BULAN FAMHEAD
+                    </option>
+                  </select>
+                  <label for="EMAIL" class="mt-2">Email :</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="EMAIL"
+                    name="EMAIL"
+                    placeholder="Masukkan alamat email"
+                    required
+                  />
+                  <label for="SANDI" class="mt-2">SANDI :</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="SANDI"
+                    name="SANDI"
+                    placeholder="Masukkan SANDI"
+                    required
+                  />
+                  <div class="input-group-append mt-2">
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      id="togglePassword"
+                    >
+                      Lihat Sandi
+                    </button>
+                  </div>
+                  <label for="HARGA" class="mt-2">HARGA :</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="HARGA"
+                    name="HARGA"
+                    placeholder="Masukkan HARGA"
+                    required
+                  />
+                  <label for="JUMLAH" class="mt-2">JUMLAH :</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="JUMLAH"
+                    name="JUMLAH"
+                    placeholder="Masukkan JUMLAH"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  Pesan Sekarang
+                </button>
+              </form>
+              <div id="result" class="mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
