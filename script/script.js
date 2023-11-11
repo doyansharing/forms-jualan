@@ -8,11 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sandiInput.type = sandiInput.type === "password" ? "text" : "password";
   });
 
-  // ... (lanjutkan dengan kode lainnya)
-});
-document.addEventListener("DOMContentLoaded", function () {
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbzMaHwm3mQJIvMCd5uWzR07H05GJRkpAsLMJFYS-5Gdb2c9FE9j_1bF_dBkbiRPkeoX7A/exec";
+  const scriptURL = "<linkUrlGoogleAppScrit>";
   const form = document.forms["submit-to-google-sheet"];
 
   const jenisAkunDropdown = document.getElementById("JENIS AKUN");
