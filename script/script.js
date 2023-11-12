@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   //================================================//
   //============= UBAH DATA DISINI ============//
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbzMaHwm3mQJIvMCd5uWzR07H05GJRkpAsLMJFYS-5Gdb2c9FE9j_1bF_dBkbiRPkeoX7A/exec";
+  const scriptURL = "isi_url_appscript_kamu";
   const form = document.forms["submit-to-google-sheet"];
   //===========================================//
   const jenisAkunDropdown = document.getElementById("JENIS_AKUN"); // ubah sesuai keinginan anda
