@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  //=============== LOGIKA SANDI ==================//
   const sandiInput = document.getElementById("SANDI");
   const togglePasswordBtn = document.getElementById("togglePassword");
 
@@ -7,33 +8,76 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mengganti tipe input antara password dan text
     sandiInput.type = sandiInput.type === "password" ? "text" : "password";
   });
-
-  const scriptURL = "<linkUrlGoogleAppScrit>";
+  //================================================//
+  //============= UBAH DATA DISINI ============//
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbzMaHwm3mQJIvMCd5uWzR07H05GJRkpAsLMJFYS-5Gdb2c9FE9j_1bF_dBkbiRPkeoX7A/exec";
   const form = document.forms["submit-to-google-sheet"];
-
-  const jenisAkunDropdown = document.getElementById("JENIS AKUN");
-  const planDropdown = document.getElementById("PLAN");
+  //===========================================//
+  const jenisAkunDropdown = document.getElementById("JENIS_AKUN"); // ubah sesuai keinginan anda
+  const planDropdown = document.getElementById("PLAN"); // ubah juga kalau ngerti
 
   jenisAkunDropdown.addEventListener("change", function () {
     adjustPlanOptions();
   });
-
+  planDropdown.addEventListener("click", function () {
+    const selectedJenisAkun = jenisAkunDropdown.value;
+    if (!selectedJenisAkun) {
+      alert("Pilih jenis akun terlebih dahulu!");
+    }
+  });
   function adjustPlanOptions() {
     const selectedJenisAkun = jenisAkunDropdown.value;
-    const planOptions = planDropdown.options;
+    const planDropdownOptions = planDropdown.options;
 
-    for (let i = 0; i < planOptions.length; i++) {
-      const planOption = planOptions[i];
-      const planType = planOption.getAttribute("data-type");
+    // Hapus semua opsi pada dropdown, jadi sehingga jadi tidak ada opsinya
+    for (let i = planDropdownOptions.length - 1; i >= 0; i--) {
+      planDropdownOptions[i].remove();
+    }
 
-      if (planType === selectedJenisAkun || planType === undefined) {
-        planOption.style.display = "block";
-      } else {
-        planOption.style.display = "none";
-      }
+    // aww
+    if (selectedJenisAkun === "") {
+      addOption(planDropdown, "", "Pilih PLAN");
+    }
+
+    // ganti di sini aja
+    switch (selectedJenisAkun) {
+      case "SPOTIFY":
+        addOption(planDropdown, "1 BULAN", "1 BULAN");
+        addOption(planDropdown, "2 BULAN", "2 BULAN");
+        addOption(planDropdown, "3 BULAN", "3 BULAN");
+        break;
+      case "YOUTUBE PREMIUM":
+        addOption(planDropdown, "1 BULAN INDPLAN", "1 BULAN INDPLAN");
+        addOption(planDropdown, "4 BULAN INDPLAN", "4 BULAN INDPLAN");
+        addOption(planDropdown, "1 BULAN FAMHEAD", "1 BULAN FAMHEAD");
+        break;
+      case "CANVA PRO":
+        addOption(planDropdown, "TEAM 1 BULAN", "TEAM 1 BULAN");
+        addOption(planDropdown, "ADMIN 1 BULAN", "ADMIN 1 BULAN");
+        break;
+      case "VIDIO PREMIER PLATINUM":
+        addOption(planDropdown, "1 TAHUN NOGAR", "1 TAHUN NOGAR");
+        break;
+      case "ZOOM PRO":
+        addOption(planDropdown, "14 DAY", "14 DAY");
+        addOption(planDropdown, "30 DAY", "30 DAY");
+        break;
+      case "APPLE MUSIC":
+        addOption(planDropdown, "1 BULAN INDPLAN", "1 BULAN INDPLAN");
+        addOption(planDropdown, "1 BULAN FAMHEAD", "1 BULAN FAMHEAD");
+        break;
+      default:
+        break;
     }
   }
 
+  function addOption(selectElement, value, text) {
+    const option = document.createElement("option");
+    option.value = value;
+    option.text = text;
+    selectElement.add(option);
+  }
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -59,55 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
           `<div class="alert alert-danger">Terjadi kesalahan: ${error.message}</div>`
         )
       );
+    window.location.href =
+      "https://wa.me/6282172392004?text=*Saya+Sudah+Memesan+Silahkan+Cek+Admin*";
   });
 
   adjustPlanOptions();
 });
-
-/* 
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.forms["submit-to-google-sheet"];
-  const emailInput = form.querySelector("#EMAIL");
-
-  // Menambahkan event listener untuk event input
-  emailInput.addEventListener("input", function () {
-    // Mengambil nilai input email
-    const emailValue = emailInput.value;
-
-    // Menyisipkan "emailnya :" di depan nilai input jika belum ada
-    if (!emailValue.startsWith("emailnya :")) {
-      emailInput.value = "emailnya : " + emailValue;
-    }
-  });
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Mengganti nilai input email pada FormData sebelum mengirimkan formulir
-    const formData = new FormData(form);
-    formData.set("EMAIL", emailInput.value);
-
-    // Melanjutkan pengiriman data ke Google Sheets
-    fetch(scriptURL, { method: "POST", body: formData })
-      .then((response) => {
-        if (response.ok) {
-          $("#result").html(
-            `<div class="alert alert-success">${response.result}</div>`
-          );
-        } else {
-          $("#result").html(
-            `<div class="alert alert-danger">Terjadi kesalahan: ${response.statusText}</div>`
-          );
-        }
-      })
-      .catch((error) =>
-        $("#result").html(
-          `<div class="alert alert-danger">Terjadi kesalahan: ${error.message}</div>`
-        )
-      );
-  });
-});
-
-
-
-*/

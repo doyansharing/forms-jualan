@@ -1,3 +1,32 @@
 body {
   background-color: #979797;
 }
+div.img-qris {
+  padding: 0;
+  width: 70%;
+  margin: auto;
+}
+div.img-qris > img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+.inp-pw {
+  width: 50%;
+}
+.btn-pw {
+  width: 10%;
+  height: 2.3em;
+  margin-left: 20px;
+  overflow: hidden;
+  font-size: 14px;
+  background-color: #979797;
+  color: black;
+}
+.btn.pw {
+  transition: transform background-color 5s ease-in-out;
+}
+.btn-pw:hover {
+  transform: scale(1.2);
+  background-color: blueviolet;
+}

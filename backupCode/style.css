@@ -1,0 +1,13 @@
+body {
+  background-color: #979797;
+}
+div.img-qris {
+  padding: 0;
+  width: 70%;
+  margin: auto;
+}
+div.img-qris > img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
