@@ -86,7 +86,7 @@ function doPost (e) {
   <img src="https://telegra.ph/file/ab3afdb62356132725c8d.jpg" alt="contohDokumen4" width="70%" height="80%">
 </p>
 7. Setelah itu ubah kepemilikan menjadi saya. dan option kedua kamu pilih "siapa saja". setelah itu copy linknya
- Kalau ndak paham Nonton [VIDIO INI SAJA](https://youtu.be/g4wATezvY2o)
+ > Kalau ndak paham Nonton [VIDIO INI SAJA](https://youtu.be/g4wATezvY2o)
 
 ---------
 
