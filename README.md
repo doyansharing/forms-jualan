@@ -26,7 +26,7 @@
 <p class="center">
   <img src="https://telegra.ph/file/4a97a44453c3065e1b0dd.jpg" alt="contohDokumen" width="70%" height="80%">
 </p>
-3. Judul bebas dan kalian harus menamakan header selalu di atas jika tidak maka error. Apakah bisa mengganti header dengan yang kita mau?. Tentu Saja! Lihat VIDIO INI untuk melihat penjelasan dan caranya.
+3. Judul bebas dan kalian harus menamakan header selalu di atas jika tidak maka error. Apakah bisa mengganti header dengan yang kita mau?. Tentu Saja! Lihat [VIDIO INI](https://youtu.be/g4wATezvY2o) untuk melihat penjelasan dan caranya.
 
 ---------
 
@@ -86,7 +86,7 @@ function doPost (e) {
   <img src="https://telegra.ph/file/ab3afdb62356132725c8d.jpg" alt="contohDokumen4" width="70%" height="80%">
 </p>
 7. Setelah itu ubah kepemilikan menjadi saya. dan option kedua kamu pilih "siapa saja". setelah itu copy linknya
-> Kalau ndak paham Nonton VIDIO INI SAJA
+> Kalau ndak paham Nonton [VIDIO INI SAJA](https://youtu.be/g4wATezvY2o)
 
 ---------
 
